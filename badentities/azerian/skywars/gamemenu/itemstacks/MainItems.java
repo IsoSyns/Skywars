@@ -1,0 +1,65 @@
+package badentities.azerian.skywars.gamemenu.itemstacks;
+
+import org.bukkit.ChatColor;
+import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainItems {
+
+/*
+ * Made By: BadEntities
+ * Copyright © 2017 Azerian Network.
+ * All rights reserved. Please email badentities@gmail.com for usage rights and other information.
+ */
+
+    private ItemStack kitSelector() {
+        ItemStack item = new ItemStack(Material.NETHER_STAR);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName(ChatColor.GREEN + "Kit Selector " + ChatColor.GRAY + "(Right Click)");
+        List<String> lore = new ArrayList<String>();
+        lore.add(ChatColor.GRAY + "Right click to access the");
+        lore.add(ChatColor.GRAY + "kit menu!");
+        meta.setLore(lore);
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    private ItemStack leaveGame() {
+        ItemStack item = new ItemStack(Material.BED);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName(ChatColor.RED + "Leave The Game " + ChatColor.GRAY + "(Right Click)");
+        List<String> lore = new ArrayList<String>();
+        lore.add(ChatColor.GRAY + "Right click to go back to the lobby!");
+        meta.setLore(lore);
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    private ItemStack spectatorMenu() {
+        ItemStack item = new ItemStack(Material.COMPASS);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName(ChatColor.YELLOW + "Spectator gamemenu " + ChatColor.GRAY + "(Right Click)");
+        List<String> lore = new ArrayList<String>();
+        lore.add(ChatColor.GRAY + "Right click to open the Spectator gamemenu!");
+        meta.setLore(lore);
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    public ItemStack getKitSelector() {
+        return kitSelector();
+    }
+
+    public ItemStack getLeaveGame() {
+        return leaveGame();
+    }
+
+    public ItemStack getSpectatorMenu() {
+        return spectatorMenu();
+    }
+
+}

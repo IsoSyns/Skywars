@@ -1,0 +1,38 @@
+package badentities.azerian.skywars.gamemenu.itemstacks;
+
+import org.bukkit.Material;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.PlayerInventory;
+
+public class KitSelectorItems {
+
+/*
+ * Made By: BadEntities
+ * Copyright © 2017 Azerian Network.
+ * All rights reserved. Please email badentities@gmail.com for usage rights and other information.
+ */
+
+    public static void giveDefault(Player player) {
+        PlayerInventory inv = player.getInventory();
+        inv.clear();
+        inv.setHelmet(new ItemStack(Material.LEATHER_HELMET));
+        inv.setBoots(new ItemStack(Material.LEATHER_BOOTS));
+        inv.setLeggings(new ItemStack(Material.LEATHER_LEGGINGS));
+        inv.setChestplate(new ItemStack(Material.LEATHER_CHESTPLATE));
+        inv.setItem(0, new ItemStack(Material.STONE_SWORD));
+        inv.setItem(1, new ItemStack(Material.STONE_AXE));
+        inv.setItem(2, new ItemStack(Material.IRON_PICKAXE));
+        inv.setItem(3, new ItemStack(Material.STONE_SPADE));
+        inv.setItem(4, new ItemStack(Material.WOOD, 64));
+    }
+
+    public static void clearAll(Player player) {
+        PlayerInventory inv = player.getInventory();
+        inv.setHelmet(new ItemStack(Material.AIR));
+        inv.setBoots(new ItemStack(Material.AIR));
+        inv.setLeggings(new ItemStack(Material.AIR));
+        inv.setChestplate(new ItemStack(Material.AIR));
+    }
+
+}

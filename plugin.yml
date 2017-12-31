@@ -1,0 +1,12 @@
+main: badentities.azerian.skywars.SkyWars
+name: SkyWars
+version: 0.8
+author: BadEntities
+description: SkyWars Minigame
+commands:
+  cstate:
+    description: Check GameState
+  forcestart:
+    description: Force Start Game
+  restarts:
+    description: Force Start Game
